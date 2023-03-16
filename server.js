@@ -38,7 +38,7 @@ server((req, res) => {
     } else if (content_type === 'text/html' && req.url.slice(-1) === '/') {
         file_path = path.join(__dirname, 'views', req.url, 'index.html');
     } else if (content_type === 'text/html') {
-        file_path = path.join(__dirname, 'views', req.url);
+        file_path = path.join(__dirname, 'views', req.url, 'index.html');
     } else {
         file_path = path.join(__dirname, req.url);
     }
